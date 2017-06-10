@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <AnchorPane layoutX="132.0" layoutY="23.0" prefHeight="338.0" prefWidth="401.0">
+         <children>
+            <Label layoutX="106.0" layoutY="14.0" prefHeight="31.0" prefWidth="141.0" text="Ingresar Libro">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="84.0" text="Nombre" />
+            <Label layoutX="36.0" layoutY="121.0" text="Descripcion" />
+            <Label layoutX="36.0" layoutY="156.0" text="Autor" />
+            <Label layoutX="38.0" layoutY="192.0" text="Editorial" />
+            <Label layoutX="42.0" layoutY="231.0" text="Estado" />
+            <TextField layoutX="161.0" layoutY="80.0" />
+            <TextField layoutX="161.0" layoutY="117.0" />
+            <TextField layoutX="161.0" layoutY="152.0" />
+            <TextField layoutX="161.0" layoutY="188.0" />
+            <ComboBox layoutX="161.0" layoutY="227.0" prefWidth="150.0" />
+            <Button layoutX="317.0" layoutY="281.0" mnemonicParsing="false" text="Aceptar" />
+            <Button layoutX="216.0" layoutY="281.0" mnemonicParsing="false" text="Regresar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
