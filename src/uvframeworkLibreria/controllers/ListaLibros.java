@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframeworkLibreria.views;
+package uvframeworkLibreria.controllers;
 
 /**
  *
- * @author Lab7-35
+ * @author Astrid
  */
-public class InsertarLibros {
+public class ListaLibros {
     
 }
