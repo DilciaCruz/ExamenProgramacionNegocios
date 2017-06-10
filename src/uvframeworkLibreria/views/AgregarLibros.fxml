@@ -7,29 +7,28 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExamenLibreria.controllers.InsertarLibrosViewController">
    <children>
-      <AnchorPane layoutX="132.0" layoutY="23.0" prefHeight="338.0" prefWidth="401.0">
+      <AnchorPane layoutX="132.0" layoutY="25.0" prefHeight="361.0" prefWidth="401.0">
          <children>
-            <Label layoutX="106.0" layoutY="14.0" prefHeight="31.0" prefWidth="141.0" text="Ingresar Libro">
+            <Label layoutX="130.0" layoutY="14.0" prefHeight="31.0" prefWidth="141.0" text="Ingresar Libro">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label layoutX="38.0" layoutY="84.0" text="Nombre" />
-            <Label layoutX="36.0" layoutY="121.0" text="Descripcion" />
-            <Label layoutX="36.0" layoutY="156.0" text="Autor" />
-            <Label layoutX="38.0" layoutY="192.0" text="Editorial" />
-            <Label layoutX="42.0" layoutY="231.0" text="Estado" />
-            <TextField layoutX="161.0" layoutY="80.0" />
-            <TextField layoutX="161.0" layoutY="117.0" />
-            <TextField layoutX="161.0" layoutY="152.0" />
-            <TextField layoutX="161.0" layoutY="188.0" />
-            <ComboBox layoutX="161.0" layoutY="227.0" prefWidth="150.0" />
-            <Button layoutX="317.0" layoutY="281.0" mnemonicParsing="false" text="Aceptar" />
-            <Button layoutX="216.0" layoutY="281.0" mnemonicParsing="false" text="Regresar" />
+            <Label layoutX="40.0" layoutY="112.0" text="Nombre" />
+            <Label layoutX="38.0" layoutY="149.0" text="Descripcion" />
+            <Label layoutX="38.0" layoutY="184.0" text="Autor" />
+            <Label layoutX="40.0" layoutY="220.0" text="Editorial" />
+            <TextField fx:id="nombreTxt" layoutX="163.0" layoutY="108.0" />
+            <TextField fx:id="descripcionTxt" layoutX="163.0" layoutY="145.0" />
+            <TextField fx:id="autorTxt" layoutX="163.0" layoutY="180.0" />
+            <TextField fx:id="editorialTxt" layoutX="163.0" layoutY="216.0" />
+            <Button layoutX="322.0" layoutY="306.0" mnemonicParsing="false" onAction="#aceptarbtn" text="Aceptar" />
+            <Button layoutX="221.0" layoutY="306.0" mnemonicParsing="false" text="Regresar" />
+            <Label layoutX="40.0" layoutY="78.0" prefHeight="17.0" prefWidth="44.0" text="ID Libro" />
+            <TextField fx:id="idTxt" layoutX="164.0" layoutY="74.0" />
          </children>
       </AnchorPane>
    </children>
-</AnchorPane>
+</fx:root>
