@@ -51,10 +51,10 @@ public class WindowsManager {
         String fullpath;
 
         switch(path){
-            
-           
             case "/menu": fullpath="views/MenuView.fxml"; break;
-            case "/agregarlibros": fullpath="views/AgregarLibros.fxml"; break;
+            case "/agregarLibros": fullpath="views/AgregarLibros.fxml"; break;
+            case "/agregarAlumnos": fullpath="views/AgregarAlumnos.fxml"; break;
+            case "/agregarAutores": fullpath="views/AgregarAutores.fxml"; break;
             //case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;         
             default: fullpath="views/MenuView.fxml";
         }

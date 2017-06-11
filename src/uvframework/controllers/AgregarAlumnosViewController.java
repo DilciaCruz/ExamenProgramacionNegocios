@@ -7,29 +7,15 @@ package uvframework.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import uvframework.tools.WindowsManager;
 
 /**
  * FXML Controller class
  *
  * @author USUARIO
  */
-public class MenuViewController implements Initializable {
+public class AgregarAlumnosViewController implements Initializable {
 
-    @FXML
-    private void MenuViewBtnLibrosClick() {
-        WindowsManager.getStage("/agregarLibros").show();
-    }
-     @FXML
-    private void MenuViewBtnAutoresClick() {
-        WindowsManager.getStage("/agregarAutores").show();
-    }
-    @FXML
-    private void MenuViewBtnAlumnosClick() {
-        WindowsManager.getStage("/agregarAlumnos").show();
-    }
     /**
      * Initializes the controller class.
      */
