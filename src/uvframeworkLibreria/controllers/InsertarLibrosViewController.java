@@ -27,7 +27,7 @@ public class InsertarLibrosViewController implements Initializable{
     
     @FXML
     private void aceptarbtn() {                                           
-      LibrosModel.crear( idTxt.getText(), nombreTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
+      LibrosModel.AgregarLibros( idTxt.getText(), nombreTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
         
 
 // TODO add your handling code here:

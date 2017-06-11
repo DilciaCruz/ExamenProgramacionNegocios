@@ -5,12 +5,13 @@
  */
 package uvframeworkLibreria.models.entities;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import uvframeworkLibreria.ExamenLibreria;
-
 /**
  *
  * @author Lab7-35
@@ -18,7 +19,7 @@ import uvframeworkLibreria.ExamenLibreria;
 public class LibrosModel {
     
     
-         public static void crear( String id ,String nombre, String descripcion, String autor, String editorial ){
+         public static void AgregarLibros( String id ,String nombre, String descripcion, String autor, String editorial ){
         
         Statement st;
         
@@ -35,3 +36,4 @@ public class LibrosModel {
     }
     
 }
+
