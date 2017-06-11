@@ -26,10 +26,18 @@ public class InsertarLibrosViewController implements Initializable{
     
     
     @FXML
-    private void aceptarbtn {                                           
+    private void aceptarbtn() {                                           
       LibrosModel.crear( idTxt.getText(), nombreTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
         
 
 // TODO add your handling code here:
-    }  
+    }
+    
+    
+      @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    } 
+    
+    
 }
