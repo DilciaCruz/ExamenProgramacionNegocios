@@ -19,7 +19,6 @@ import uvframeworkLibreria.models.entities.LibrosModel;
 public class InsertarLibrosViewController implements Initializable{
     
     @FXML private TextField idTxt;
-    @FXML private TextField nombreTxt;
     @FXML private TextField descripcionTxt;
     @FXML private TextField editorialTxt;
     @FXML private TextField autorTxt;
@@ -27,7 +26,7 @@ public class InsertarLibrosViewController implements Initializable{
     
     @FXML
     private void aceptarbtn() {                                           
-      LibrosModel.AgregarLibros( idTxt.getText(), nombreTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
+      LibrosModel.AgregarLibros( idTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
         
 
 // TODO add your handling code here:

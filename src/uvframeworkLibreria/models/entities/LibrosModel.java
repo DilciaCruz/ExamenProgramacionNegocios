@@ -19,14 +19,14 @@ import uvframeworkLibreria.ExamenLibreria;
 public class LibrosModel {
     
     
-         public static void AgregarLibros( String id ,String nombre, String descripcion, String autor, String editorial ){
+         public static void AgregarLibros( String idLibro ,String descripcionLibro, String autorLibro, String editorialLibro ){
         
         Statement st;
-        
+        ResultSet rs ;
         try {
             
             st = ExamenLibreria.conn.createStatement(); 
-            st.executeUpdate("INSERT INTO usuarios VALUES ('"+id+"','"+nombre+"', '"+descripcion+"', '"+autor+"','"+editorial+"');");
+            st.executeUpdate("INSERT INTO libros VALUES ('"+idLibro+"','"+descripcionLibro+"', '"+autorLibro+"','"+editorialLibro+"');");
             
         } catch (SQLException ex) {
             Logger.getLogger(LibrosModel.class.getName()).log(Level.SEVERE, null, ex);

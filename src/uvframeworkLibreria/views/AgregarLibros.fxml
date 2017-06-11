@@ -7,9 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExamenLibreria.controllers.InsertarLibrosViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExamenLibreria.controllers.InsertarLibrosViewController">
    <children>
-      <AnchorPane layoutX="132.0" layoutY="25.0" prefHeight="361.0" prefWidth="401.0">
+      <AnchorPane layoutX="133.0" layoutY="25.0" prefHeight="296.0" prefWidth="401.0">
          <children>
             <Label layoutX="130.0" layoutY="14.0" prefHeight="31.0" prefWidth="141.0" text="Ingresar Libro">
                <font>
@@ -17,18 +17,16 @@
                </font>
             </Label>
             <Label layoutX="40.0" layoutY="112.0" text="Nombre" />
-            <Label layoutX="38.0" layoutY="149.0" text="Descripcion" />
-            <Label layoutX="38.0" layoutY="184.0" text="Autor" />
-            <Label layoutX="40.0" layoutY="220.0" text="Editorial" />
+            <Label layoutX="47.0" layoutY="150.0" text="Autor" />
+            <Label layoutX="40.0" layoutY="184.0" text="Editorial" />
             <TextField fx:id="nombreTxt" layoutX="163.0" layoutY="108.0" />
-            <TextField fx:id="descripcionTxt" layoutX="163.0" layoutY="145.0" />
-            <TextField fx:id="autorTxt" layoutX="163.0" layoutY="180.0" />
-            <TextField fx:id="editorialTxt" layoutX="163.0" layoutY="216.0" />
-            <Button layoutX="322.0" layoutY="306.0" mnemonicParsing="false" onAction="#aceptarbtn" text="Aceptar" />
-            <Button layoutX="221.0" layoutY="306.0" mnemonicParsing="false" text="Regresar" />
+            <TextField fx:id="autorTxt" layoutX="164.0" layoutY="146.0" />
+            <TextField fx:id="editorialTxt" layoutX="164.0" layoutY="180.0" />
+            <Button fx:id="aceptarbtn" layoutX="297.0" layoutY="241.0" mnemonicParsing="false" onAction="#aceptarbtn" text="Aceptar" />
+            <Button layoutX="192.0" layoutY="241.0" mnemonicParsing="false" text="Regresar" />
             <Label layoutX="40.0" layoutY="78.0" prefHeight="17.0" prefWidth="44.0" text="ID Libro" />
             <TextField fx:id="idTxt" layoutX="164.0" layoutY="74.0" />
          </children>
       </AnchorPane>
    </children>
-</fx:root>
+</AnchorPane>
