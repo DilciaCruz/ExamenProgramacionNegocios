@@ -3,26 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframework.models.entities;
+package uvframework.models;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import uvframework.models.entities.EstudianteEntity;
 import uvframework.tools.MySQLConn;
 
 /**
  *
- * @author Daniela Ordoñez
+ * @author USUARIO
  */
 public class EstudiantesModel {
-
-    public static boolean insertarEstudiante(EstudianteEntity estudiante) {
-        Connection con = MySQLConn.conn;
-
+     public static EstudianteEntity insertarEstudiante(EstudianteEntity estudiante) {
         try {
 
             String insertsql = "INSERT INTO estudiantes(nombreEstudiante,carreraEstudiante) VALUES ('?', '?');";
@@ -44,8 +41,8 @@ public class EstudiantesModel {
                 return null;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(EstudiantesModel.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
+            Logger.getLogger(uvframework.models.EstudiantesModel.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
         }
 
     }

@@ -22,12 +22,12 @@ public class ExamenLibreria extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-       /* if(MySQLConn.InitConn()){*/
+        if(MySQLConn.InitConn()){
           //  WindowsManager.getStage("/agregarlibros").show();
             WindowsManager.getStage("/menu").show();
-       /* }else{
+        }else{
             JOptionPane.showMessageDialog(null, "Error Conectando a la DB");
-        }*/
+        }
     }
     
     
