@@ -24,11 +24,11 @@ public class MenuViewController implements Initializable {
     }
     @FXML
     private void MenuViewBtnAutoresClick() {
-        WindowsManager.getStage("/insertarAutores").show();
+        WindowsManager.getStage("/agregarAutores").show();
     }
     @FXML
     private void MenuViewBtnAlumnosClick() {
-        WindowsManager.getStage("/guardarAlumnos").show();
+        WindowsManager.getStage("/agregarAlumnos").show();
     }
     /**
      * Initializes the controller class.
