@@ -7,7 +7,9 @@ package uvframework.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -16,6 +18,15 @@ import javafx.fxml.Initializable;
  */
 public class AgregarAlumnosViewController implements Initializable {
 
+    @FXML private TextField NombreCompleto;
+    @FXML private TextField Carrera;
+    
+    @FXML
+    private void AgregarAlumnosBtnClick(){
+        
+    }
+    
+    
     /**
      * Initializes the controller class.
      */
