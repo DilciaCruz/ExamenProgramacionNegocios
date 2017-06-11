@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,13 +8,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uvframework.controllers.AgregarAutoresViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.AgregarAutoresViewController">
    <children>
-      <Label layoutX="257.0" layoutY="43.0" text="Agregar Autores" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="210.0">
+      <Label layoutX="212.0" layoutY="57.0" prefHeight="28.0" prefWidth="193.0" text="Ingreso de Autores" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="195.0">
          <font>
             <Font name="Serif Regular" size="24.0" />
          </font>
       </Label>
+      <Label layoutX="81.0" layoutY="136.0" text="Nombre del Autor" />
+      <TextField fx:id="txtNombreAutor" layoutX="222.0" layoutY="132.0" prefHeight="17.0" prefWidth="291.0" />
+      <TextField fx:id="txtAñoNac" layoutX="222.0" layoutY="188.0" prefHeight="17.0" prefWidth="291.0" />
+      <Label layoutX="81.0" layoutY="192.0" text="Año de Nacimiento" />
+      <TextField fx:id="txt1Fecha" layoutX="222.0" layoutY="248.0" prefHeight="25.0" prefWidth="291.0" />
+      <Label layoutX="81.0" layoutY="252.0" text="Fecha de 1er Publicación" />
+      <Button fx:id="btnInsertar" layoutX="222.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Insertar" />
+      <Button fx:id="btnCancelar" layoutX="401.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Cancelar" />
    </children>
 </AnchorPane>
