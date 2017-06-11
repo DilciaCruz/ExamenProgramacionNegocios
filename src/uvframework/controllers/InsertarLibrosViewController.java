@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import uvframework.models.entities.LibrosModel;
+import uvframework.tools.WindowsManager;
 
 /**
  *
@@ -25,13 +26,22 @@ public class InsertarLibrosViewController implements Initializable{
     
     
     @FXML
-    private void aceptarbtn() {                                           
+    private void aceptarbtnclick() {                                           
       //LibrosModel.AgregarLibros( idTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
         
 
 // TODO add your handling code here:
     }
     
+    
+    
+       @FXML   
+    private void regresarbtnclick() {
+        
+        WindowsManager.getStage("/agregarLibros").hide();
+        WindowsManager.getStage("/menu").show();
+    
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
