@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframeworkLibreria.tools;
+package uvframework.tools;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,7 +14,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import uvframeworkLibreria.ExamenLibreria;
+import uvframework.ExamenLibreria;
+
 
 /**
  *
@@ -51,14 +52,11 @@ public class WindowsManager {
 
         switch(path){
             
+           
+            case "/menu": fullpath="views/MenuView.fxml"; break;
             case "/agregarlibros": fullpath="views/AgregarLibros.fxml"; break;
-          //  case "/menu": fullpath="views/menu.fxml"; break;
-            //case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;
-            
-            
-            
-            
-            default: fullpath="views/LoginView.fxml";
+            //case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;         
+            default: fullpath="views/MenuView.fxml";
         }
         
         return FXMLLoader.load(ExamenLibreria.class.getResource(fullpath));

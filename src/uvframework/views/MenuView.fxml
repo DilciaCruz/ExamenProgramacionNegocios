@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="332.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.MenuViewController">
+   <children>
+      <Button layoutX="94.0" layoutY="109.0" mnemonicParsing="false" onAction="#MenuViewBtnLibrosClick" prefHeight="50.0" prefWidth="206.0" text="Libros" AnchorPane.leftAnchor="70.0" />
+      <Button layoutX="94.0" layoutY="175.0" mnemonicParsing="false" onAction="#MenuViewBtnAutoresClick" prefHeight="50.0" prefWidth="206.0" text="Autores" AnchorPane.leftAnchor="70.0" />
+      <Button layoutX="70.0" layoutY="241.0" mnemonicParsing="false" onAction="#MenuViewBtnAlumnosClick" prefHeight="50.0" prefWidth="206.0" text="Alumnos" AnchorPane.leftAnchor="70.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="369.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="369.0" AnchorPane.rightAnchor="70.0">
+         <image>
+            <Image url="@../images/libros%201.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="276.0" layoutY="44.0" text="Libreria Examen" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

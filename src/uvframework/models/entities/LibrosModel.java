@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframeworkLibreria.models.entities;
+package uvframework.models.entities;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import uvframeworkLibreria.ExamenLibreria;
+import uvframework.ExamenLibreria;
 /**
  *
  * @author Lab7-35

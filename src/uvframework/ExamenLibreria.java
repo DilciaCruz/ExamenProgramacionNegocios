@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframeworkLibreria;
+package uvframework;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-import uvframeworkLibreria.tools.MySQLConn;
-import uvframeworkLibreria.tools.WindowsManager;
+import uvframework.tools.MySQLConn;
+import uvframework.tools.WindowsManager;
 
 /**
  *
@@ -17,16 +17,17 @@ import uvframeworkLibreria.tools.WindowsManager;
  */
 public class ExamenLibreria extends Application {
 
-    public static Object conn;
+//    public static Object conn;
     
     
-     @Override
+    @Override
     public void start(Stage stage) throws Exception {
-        if(MySQLConn.InitConn()){
-            WindowsManager.getStage("/agregarlibros").show();
-        }else{
+       /* if(MySQLConn.InitConn()){*/
+          //  WindowsManager.getStage("/agregarlibros").show();
+            WindowsManager.getStage("/menu").show();
+       /* }else{
             JOptionPane.showMessageDialog(null, "Error Conectando a la DB");
-        }
+        }*/
     }
     
     
@@ -38,7 +39,7 @@ public class ExamenLibreria extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        launch(args);
         
         
     }
