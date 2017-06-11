@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.AgregarAutoresViewController">
+   <children>
+      <Label layoutX="237.0" layoutY="77.0" prefHeight="28.0" prefWidth="193.0" text="Agregar Autores" AnchorPane.leftAnchor="237.0" AnchorPane.rightAnchor="170.0">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="157.0" text="Nombre del Autor" />
+      <TextField fx:id="txtNombreAutor" layoutX="212.0" layoutY="153.0" prefHeight="25.0" prefWidth="302.0" />
+      <TextField fx:id="txtCantidad" layoutX="212.0" layoutY="229.0" prefHeight="25.0" prefWidth="302.0" />
+      <Label layoutX="80.0" layoutY="233.0" text="Cantidad de Libros" />
+      <Button fx:id="btnInsertar" layoutX="212.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnInsertarClick" prefHeight="25.0" prefWidth="112.0" text="Insertar" />
+      <Button fx:id="btnCancelar" layoutX="397.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnCancelarClick" prefHeight="25.0" prefWidth="112.0" text="Cancelar" />
+   </children>
+</AnchorPane>

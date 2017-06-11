@@ -13,17 +13,17 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Lab7-35
+ * @author Rafael Maldonado
  */
 public class MySQLConn {
     
-      public static Connection conn;
+    public static Connection conn;
     
     public static Boolean InitConn(){
     
         try {
             
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/progranegociosdb", "root", "1234");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/sistema", "root", "r3344t89");
             return true;
             
         } catch (SQLException ex) {
@@ -32,6 +32,5 @@ public class MySQLConn {
         }
     
     }
-    
     
 }

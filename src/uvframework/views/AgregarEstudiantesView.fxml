@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.AgregarEstudiantesViewController">
+   <children>
+      <Label layoutX="207.0" layoutY="71.0" prefHeight="28.0" prefWidth="187.0" text="Agregar Alumnos" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="71.0">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="164.0" prefHeight="17.0" prefWidth="134.0" text="Nombre Completo" AnchorPane.leftAnchor="130.0" />
+      <Label layoutX="130.0" layoutY="224.0" prefHeight="28.0" prefWidth="80.0" text="Carrera" AnchorPane.leftAnchor="130.0" />
+      <TextField fx:id="NombreCompleto" layoutX="225.0" layoutY="151.0" prefHeight="42.0" prefWidth="200.0" promptText="Nombre Completo" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="130.0" />
+      <TextField fx:id="Carrera" layoutX="225.0" layoutY="217.0" prefHeight="42.0" prefWidth="220.0" promptText="Carrera" AnchorPane.rightAnchor="130.0" />
+      <Button layoutX="250.0" layoutY="287.0" mnemonicParsing="false" onAction="#AgregarAlumnosBtnClick" prefHeight="42.0" prefWidth="220.0" text="Guardar" />
+   </children>
+</AnchorPane>

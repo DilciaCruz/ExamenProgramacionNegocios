@@ -6,6 +6,7 @@
 package uvframework.tools;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -14,15 +15,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import uvframework.ExamenLibreria;
-
+import uvframework.UVF;
 
 /**
  *
- * @author Lab7-35
+ * @author Rafael Maldonado
  */
 public class WindowsManager {
-
     
     private static final Map stages = new HashMap(); 
     
@@ -51,16 +50,12 @@ public class WindowsManager {
         String fullpath;
 
         switch(path){
-            case "/menu": fullpath="views/MenuView.fxml"; break;
-            case "/agregarLibros": fullpath="views/AgregarLibros.fxml"; break;
-            case "/agregarEstudiantes": fullpath="views/AgregarEstudiantesView.fxml"; break;
-            case "/agregarAutores": fullpath="views/AgregarAutoresView.fxml"; break;
-            //case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;         
-            default: fullpath="views/MenuView.fxml";
+            case "/login": fullpath="views/LoginView.fxml"; break;
+            case "/main": fullpath="views/LoginView.fxml"; break;
+            case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;
+            default: fullpath="views/LoginView.fxml";
         }
         
-        return FXMLLoader.load(ExamenLibreria.class.getResource(fullpath));
-    
+        return FXMLLoader.load(UVF.class.getResource(fullpath));
     }
-    
 }

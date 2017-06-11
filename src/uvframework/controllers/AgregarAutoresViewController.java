@@ -16,26 +16,27 @@ import uvframework.tools.WindowsManager;
  *
  * @author USUARIO
  */
-public class MenuViewController implements Initializable {
 
-    @FXML
-    private void MenuViewBtnLibrosClick() {
-        WindowsManager.getStage("/agregarLibros").show();
-    }
-    @FXML
-    private void MenuViewBtnAutoresClick() {
-        WindowsManager.getStage("/agregarAutores").show();
-    }
-    @FXML
-    private void MenuViewBtnAlumnosClick() {
-        WindowsManager.getStage("/agregarEstudiantes").show();
-    }
+public class AgregarAutoresViewController implements Initializable {
+  
     /**
      * Initializes the controller class.
      */
+        @FXML
+    private void btnCancelarClick() {
+        WindowsManager.getStage("/agregarAutores").close();
+        WindowsManager.getStage("/MenuView.fxml").show();
+        
+    }
+     @FXML
+    private void btnInsertarClick() {
+      
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+         
     }    
     
 }

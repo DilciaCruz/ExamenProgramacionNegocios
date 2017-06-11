@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uvframework.controllers;
+package uvframework.models.entities;
 
 /**
  *
- * @author Astrid
+ * @author Rafael Maldonado
  */
-public class ListaLibros {
+public class UsuarioEntity {
+    
+    public String UsrUsr;
+    public String UsrNom;
+    public String UsrPwd;
     
 }
