@@ -5,11 +5,10 @@
  */
 package uvframework.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import uvframework.models.entities.EstudianteEntity;
 
 /**
  * FXML Controller class
@@ -18,20 +17,27 @@ import javafx.scene.control.TextField;
  */
 public class AgregarEstudiantesViewController implements Initializable {
 
-    @FXML private TextField NombreCompleto;
-    @FXML private TextField Carrera;
-    
     @FXML
-    private void AgregarAlumnosBtnClick(){
-        
+    private TextField NombreCompleto;
+    @FXML
+    private TextField Carrera;
+
+    @FXML
+    private void AgregarAlumnosBtnClick() {
+
+        EstudianteEntity estudiante = new EstudianteEntity();
+        estudiante.EstudianteNombre = NombreCompleto.getText();
+        estudiante.EstudianteCarrera = Carrera.getText();
+
+      EstudianteEntity dbuser = EstudiantesModel.insertarEstudiante(estudiante);
     }
-    
-    
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+}
+
+/**
+ * Initializes the controller class.
+ */
+@Override
+        public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
