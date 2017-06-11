@@ -10,6 +10,7 @@ package uvframework.models.entities;
  * @author Daniela Ordoñez
  */
 public class EstudianteEntity {
+    public int EstudianteId;
     public String EstudianteNombre;
     public String EstudianteCarrera;
 }

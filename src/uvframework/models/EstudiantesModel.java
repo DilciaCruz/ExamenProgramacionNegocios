@@ -9,8 +9,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import uvframework.models.entities.EstudianteEntity;
 import uvframework.tools.MySQLConn;
 
@@ -19,31 +21,21 @@ import uvframework.tools.MySQLConn;
  * @author USUARIO
  */
 public class EstudiantesModel {
-     public static EstudianteEntity insertarEstudiante(EstudianteEntity estudiante) {
+
+    public static EstudianteEntity insertarEstudiante(EstudianteEntity estudiante) {
+        Connection con = MySQLConn.conn;
         try {
+            String insertarsql = "INSERT INTO estudiantes(idEstudiante,nombreEstudiante,carreraEstudiante) VALUES (?,?,?);";
+            PreparedStatement pst = MySQLConn.conn.prepareStatement(insertarsql);
+            pst.setInt(1, estudiante.EstudianteId);
+            pst.setString(2, estudiante.EstudianteNombre);
+            pst.setString(3, estudiante.EstudianteCarrera);
+            pst.executeUpdate();
 
-            String insertsql = "INSERT INTO estudiantes(nombreEstudiante,carreraEstudiante) VALUES ('?', '?');";
-            
-            PreparedStatement pst = MySQLConn.conn.prepareStatement(insertsql);
-
-            pst.setString(1, estudiante.EstudianteNombre);
-            pst.setString(2, estudiante.EstudianteCarrera);
-
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) {
-                EstudianteEntity dbuser = new EstudianteEntity();
-                dbuser.EstudianteNombre = rs.getString("nombreEstudiante");
-                dbuser.EstudianteCarrera = rs.getString("carreraEstudiante");
-
-                return dbuser;
-            } else {
-                return null;
-            }
         } catch (SQLException ex) {
-            Logger.getLogger(uvframework.models.EstudiantesModel.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
+            JOptionPane.showMessageDialog(null, "Error al insertar estudiante");
         }
+        return null;
 
     }
 }
