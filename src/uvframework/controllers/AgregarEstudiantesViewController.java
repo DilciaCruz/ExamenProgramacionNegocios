@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
  *
  * @author USUARIO
  */
-public class AgregarAlumnosViewController implements Initializable {
+public class AgregarEstudiantesViewController implements Initializable {
 
     @FXML private TextField NombreCompleto;
     @FXML private TextField Carrera;

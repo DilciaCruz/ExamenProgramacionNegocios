@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.AgregarAlumnosViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.AgregarEstudiantesViewController">
    <children>
       <Label layoutX="207.0" layoutY="71.0" prefHeight="28.0" prefWidth="187.0" text="Agregar Alumnos" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="71.0">
          <font>

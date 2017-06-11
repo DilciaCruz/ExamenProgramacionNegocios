@@ -53,7 +53,7 @@ public class WindowsManager {
         switch(path){
             case "/menu": fullpath="views/MenuView.fxml"; break;
             case "/agregarLibros": fullpath="views/AgregarLibros.fxml"; break;
-            case "/agregarAlumnos": fullpath="views/AgregarAlumnosView.fxml"; break;
+            case "/agregarAlumnos": fullpath="views/AgregarEstudiantesView.fxml"; break;
             case "/agregarAutores": fullpath="views/AgregarAutoresView.fxml"; break;
             //case "/usuario/buscar": fullpath="views/LoginView.fxml"; break;         
             default: fullpath="views/MenuView.fxml";
