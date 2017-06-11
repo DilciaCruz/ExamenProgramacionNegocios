@@ -20,6 +20,7 @@ public class MenuViewController implements Initializable {
 
     @FXML
     private void MenuViewBtnLibrosClick() {
+        WindowsManager.getStage("/menu").close();
         WindowsManager.getStage("/agregarLibros").show();
     }
     @FXML

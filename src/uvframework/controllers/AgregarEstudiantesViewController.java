@@ -10,8 +10,10 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javax.swing.JOptionPane;
 import uvframework.models.EstudiantesModel;
 import uvframework.models.entities.EstudianteEntity;
+import uvframework.tools.WindowsManager;
 
 
 /**
@@ -26,13 +28,18 @@ public class AgregarEstudiantesViewController implements Initializable {
 
     @FXML
     private void AgregarAlumnosBtnClick() {
-
+        
         EstudianteEntity estudiante = new EstudianteEntity();
         
         estudiante.EstudianteNombre = NombreCompleto.getText();
         estudiante.EstudianteCarrera = Carrera.getText();
 
       EstudianteEntity dbuser = EstudiantesModel.insertarEstudiante(estudiante);
+      JOptionPane.showMessageDialog(null, "Su registro se ha guardado exitosamente en la Base de Datos");
+      NombreCompleto.setText("");
+      Carrera.setText("");
+      WindowsManager.getStage("/agregarEstudiantes").show();
+      
     }
 
 
