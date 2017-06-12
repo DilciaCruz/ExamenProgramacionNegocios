@@ -9,6 +9,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import javax.swing.JOptionPane;
+import uvframework.models.AutorModel;
+import uvframework.models.entities.AutorEntity;
+
 import uvframework.tools.WindowsManager;
 
 /**
@@ -28,9 +33,22 @@ public class AgregarAutoresViewController implements Initializable {
         WindowsManager.getStage("/MenuView.fxml").show();
         
     }
+    
+     @FXML
+    private TextField txtNombreAutor;
+    @FXML
+    private TextField txtCantidad;
      @FXML
     private void btnInsertarClick() {
-      
+      AutorEntity autor = new AutorEntity();
+
+        autor.NombreAutor = txtNombreAutor.getText();
+        autor.cantidadLibros = txtCantidad.getText();
+
+        AutorEntity dbuser = AutorModel.insertarAutor(autor);
+        JOptionPane.showMessageDialog(null, "Su registro se ha guardado exitosamente en la Base de Datos");
+        txtNombreAutor.setText("");
+        txtCantidad.setText("");
     }
     
     @Override
