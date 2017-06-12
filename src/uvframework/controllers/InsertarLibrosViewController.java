@@ -10,7 +10,11 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import uvframework.models.entities.LibrosModel;
+import javax.swing.JOptionPane;
+import uvframework.models.EstudiantesModel;
+import uvframework.models.entities.EstudianteEntity;
+import uvframework.models.entities.LibroEntity;
+import uvframework.models.LibrosModel;
 import uvframework.tools.WindowsManager;
 
 /**
@@ -19,18 +23,26 @@ import uvframework.tools.WindowsManager;
  */
 public class InsertarLibrosViewController implements Initializable{
     
-    @FXML private TextField idTxt;
-    @FXML private TextField descripcionTxt;
-    @FXML private TextField editorialTxt;
-    @FXML private TextField autorTxt;
+   // @FXML private TextField idLibro;
+    @FXML private TextField libroNombre;
+    @FXML private TextField libroFecha;
+   
     
     
     @FXML
-    private void aceptarbtnclick() {                                           
-      //LibrosModel.AgregarLibros( idTxt.getText(), descripcionTxt.getText(),autorTxt.getText(),editorialTxt.getText());
+    private void AgregarLibroBtnClick() {                                           
         
+            LibroEntity libro = new LibroEntity();
+        
+        libro.LibroNombre = libroNombre.getText();
+        libro.LibroFecha = libroFecha.getText(); 
 
-// TODO add your handling code here:
+      LibroEntity dbuser = LibrosModel.insertarlibro(libro);
+      JOptionPane.showMessageDialog(null, "Su registro se ha guardado exitosamente en la Base de Datos");
+      libroNombre.setText("");
+      libroFecha.setText("");
+      WindowsManager.getStage("/agregarLibros").show();
+      
     }
     
     
