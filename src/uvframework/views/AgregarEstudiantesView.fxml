@@ -18,6 +18,7 @@
       <Label layoutX="130.0" layoutY="224.0" prefHeight="28.0" prefWidth="80.0" text="Carrera" AnchorPane.leftAnchor="130.0" />
       <TextField fx:id="NombreCompleto" layoutX="225.0" layoutY="151.0" prefHeight="42.0" prefWidth="200.0" promptText="Nombre Completo" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="130.0" />
       <TextField fx:id="Carrera" layoutX="225.0" layoutY="217.0" prefHeight="42.0" prefWidth="220.0" promptText="Carrera" AnchorPane.rightAnchor="130.0" />
-      <Button layoutX="250.0" layoutY="287.0" mnemonicParsing="false" onAction="#AgregarAlumnosBtnClick" prefHeight="42.0" prefWidth="220.0" text="Guardar" />
+      <Button layoutX="121.0" layoutY="295.0" mnemonicParsing="false" onAction="#AgregarAlumnosBtnClick" prefHeight="42.0" prefWidth="152.0" text="Guardar" />
+      <Button layoutX="316.0" layoutY="295.0" mnemonicParsing="false" onAction="#AgregarEstudiantesRegresarBtnClick" prefHeight="42.0" prefWidth="152.0" text="Regresar" />
    </children>
 </AnchorPane>

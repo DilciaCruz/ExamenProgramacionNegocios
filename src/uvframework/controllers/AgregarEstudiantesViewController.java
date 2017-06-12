@@ -15,7 +15,6 @@ import uvframework.models.EstudiantesModel;
 import uvframework.models.entities.EstudianteEntity;
 import uvframework.tools.WindowsManager;
 
-
 /**
  * FXML Controller class
  *
@@ -23,32 +22,40 @@ import uvframework.tools.WindowsManager;
  */
 public class AgregarEstudiantesViewController implements Initializable {
 
-    @FXML private TextField NombreCompleto;
-    @FXML private TextField Carrera;
+    @FXML
+    private TextField NombreCompleto;
+    @FXML
+    private TextField Carrera;
 
     @FXML
     private void AgregarAlumnosBtnClick() {
-        
+
         EstudianteEntity estudiante = new EstudianteEntity();
-        
+
         estudiante.EstudianteNombre = NombreCompleto.getText();
         estudiante.EstudianteCarrera = Carrera.getText();
 
-      EstudianteEntity dbuser = EstudiantesModel.insertarEstudiante(estudiante);
-      JOptionPane.showMessageDialog(null, "Su registro se ha guardado exitosamente en la Base de Datos");
-      NombreCompleto.setText("");
-      Carrera.setText("");
-      WindowsManager.getStage("/agregarEstudiantes").show();
-      
+        EstudianteEntity dbuser = EstudiantesModel.insertarEstudiante(estudiante);
+        JOptionPane.showMessageDialog(null, "Su registro se ha guardado exitosamente en la Base de Datos");
+        NombreCompleto.setText("");
+        Carrera.setText("");
+
     }
 
+    @FXML
+    private void AgregarEstudiantesRegresarBtnClick() {
 
-/**
- * Initializes the controller class.
- */
+        WindowsManager.getStage("/agregarEstudiantes").hide();
+        WindowsManager.getStage("/menu").show();
+
+    }
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }
