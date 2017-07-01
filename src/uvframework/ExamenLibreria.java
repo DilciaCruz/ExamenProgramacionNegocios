@@ -5,9 +5,13 @@
  */
 package uvframework;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import org.codehaus.jackson.map.ObjectMapper;
 import uvframework.tools.MySQLConn;
 import uvframework.tools.WindowsManager;
 
@@ -22,12 +26,13 @@ public class ExamenLibreria extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        if(MySQLConn.InitConn()){
+        testJackson();
+      /*  if(MySQLConn.InitConn()){
           //  WindowsManager.getStage("/agregarlibros").show();
             WindowsManager.getStage("/menu").show();
         }else{
             JOptionPane.showMessageDialog(null, "Error Conectando a la DB");
-        }
+        }*/
     }
     
     
@@ -44,7 +49,21 @@ public class ExamenLibreria extends Application {
         
     }
    
-    
+     public static void testJackson(){
+        try {
+            Informacion info = new Informacion();
+            info.setGrupo("Grupo Jackson");
+            info.setIntegrantes(5);
+            info.setClase("Programacion de Negocios");
+            info.setCarrera("Ingenieria en Sistemas");
+            info.setCatedratico("Ing. Rafael Maldonado");
+            ObjectMapper mapper = new ObjectMapper();
+            String json= mapper.writerWithDefaultPrettyPrinter().writeValueAsString(info);
+            System.out.println("SALIDA JSON:\n"+json);
+        } catch (IOException ex) {
+            Logger.getLogger(ExamenLibreria.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
    
     
